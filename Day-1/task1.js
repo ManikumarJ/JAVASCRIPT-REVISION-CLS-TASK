@@ -1,22 +1,26 @@
-// Task 5
-// Build a simple counter using closure where each counter works independently:
-// function makeCounter() {
-//   // your code
-// }
-// const c1 = makeCounter();
-// const c2 = makeCounter();
+// Task 1
+// A user form returns this data. Write a function to check which fields are empty or missing:
+// const user = {
+//   name: "John",
+//   age: null,
+//   email: undefined,
+//   phone: ""
+// };
 
-// c1(); // 1
-// c1(); // 2
-// c2(); // 1
+const user = {
+  name: "John",
+  age: null,
+  email: undefined,
+  phone: ""
+};
 
-function makeCounter() {
+for(let val in user){
+    
+//    console.log(user[val]); // iterate
+
+   if ( user[val] === undefined || user[val] === "" || user[val] === null ){
+    console.log(val);
+   }
+   
  
 }
-const c1 = makeCounter();
-const c2 = makeCounter();
-
-c1(); // 1
-c1(); // 2
-c2(); // 1
-
